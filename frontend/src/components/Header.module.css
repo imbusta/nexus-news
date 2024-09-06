@@ -1,0 +1,14 @@
+.header{
+    height: 10vh;
+    margin-top: 0;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.header h2{
+    letter-spacing: 5px;
+    align-self: center;
+}
