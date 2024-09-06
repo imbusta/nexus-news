@@ -24,6 +24,7 @@ router.get('/', async (req, res) => {
                 error: news.error.message
             })
         }
+        console.log(news)
         res.status(200).json({
             isSuccess: true,
             data: news

@@ -1,5 +1,5 @@
 import './App.css';
-import Content from './components/Content.jsx';
+import Body from './components/Body.jsx';
 import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx';
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Content />
+      <Body />
       <Footer />
     </div>
   );
