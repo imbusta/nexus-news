@@ -19,7 +19,7 @@ export default function WeatherBox() {
             </div>
             <div className={styles.forecast}>
                 {days.map(day =>
-                    <div>
+                    <div key={day}>
                         <img src={partlyCloudy} alt='weather_icon'/>
                         <p>Mix: 7º</p>
                         <p>Max: 19º</p>
