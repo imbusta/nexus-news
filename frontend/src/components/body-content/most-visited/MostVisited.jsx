@@ -12,6 +12,7 @@ export default function MostVisited() {
                 <div className={styles.newsTitle}>
                     {top_news.map((item, index) =>
                         <NewsTitle
+                            key={index}
                             title={item.title}
                             url={item.url}
                         />

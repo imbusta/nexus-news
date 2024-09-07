@@ -1,0 +1,33 @@
+[
+    {
+        "name": "bbc",
+        "display": "BBC",
+        "image": ""
+    },
+    {
+        "name": "nyt",
+        "display": "The New York Times",
+        "image": ""
+    },
+    {
+        "name": "fox",
+
+        "display": "Fox News",
+        "image": ""
+    },
+    {
+        "name": "cnn",
+        "display": "CNN",
+        "image": ""
+    },
+    {
+        "name": "wp",
+        "display": "The Washington Post",
+        "image": ""
+    },
+    {
+        "name": "nbc",
+        "display": "NBC News",
+        "image": ""
+    }
+]
