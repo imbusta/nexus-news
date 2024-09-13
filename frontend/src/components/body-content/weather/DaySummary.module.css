@@ -1,0 +1,36 @@
+.daySummaryContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.conditions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+.daySummaryContainer img {
+    width: 6rem;
+    height: 6rem;
+    padding: 0;
+    margin: 0;
+}
+
+.conditions p {
+    margin: 2px 0px;
+    font-weight: bold;
+}
+
+.conditions span {
+    font-weight: 100;
+}
+
+.daySummaryContainer h2 {
+    color: white;
+    font-size: 3rem;
+    margin-top: 0;
+    padding-top: 0;
+}
