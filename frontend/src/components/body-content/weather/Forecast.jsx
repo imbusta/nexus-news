@@ -32,8 +32,10 @@ export default function Forecast() {
                         forecast.map((day, index) =>
                             <div key={index}>
                                 <img src={`http:${day.day.condition.icon}`} alt='weather_icon' />
-                                <p>Min: {day.day.mintemp_c}º</p>
-                                <p>Max: {day.day.mintemp_c}º</p>
+                                <p><span>Min:</span></p>
+                                <p>{day.day.mintemp_c}º</p>
+                                <p><span>Max:</span></p>
+                                <p>{day.day.mintemp_c}º</p>
                             </div>
                         )
                     }

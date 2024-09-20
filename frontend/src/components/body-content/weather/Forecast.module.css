@@ -3,4 +3,18 @@
     justify-content: space-around;
     color: white;
     text-align: center;
+    margin: auto 0px;
+    gap: 0px;
+
+}
+
+.forecast p{
+    margin-bottom: 1px;
+    margin-top: 0px;
+    size: smaller;
+}
+
+.forecast p span{
+    text-decoration: underline;
+    font-weight: bold;
 }

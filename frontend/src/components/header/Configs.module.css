@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    min-width: 20%;
+}
+
+.weather{
+    margin-right: auto;
+    margin-left: 20px;
+    display: none ;
+    justify-content: space-around;
+    gap: 2px;
+}
+
+.weather span{
+    align-self: center;
+}
+
+.weather img{
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+@media (max-width: 1080px) {
+    .weather{
+        display: flex;
+    }
+
+    .container{
+        width: 20%;
+    }
+}
+
+@media (max-width: 430px){
+    .weather{
+        display: none;
+        .container{
+            min-width: 20%;
+        }
+    }
+}

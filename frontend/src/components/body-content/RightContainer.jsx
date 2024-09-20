@@ -3,11 +3,11 @@ import NewsSources from './newsfeed/NewsSources.jsx'
 import styles from './RightContainer.module.css'
 
 
-export default function RightContainer(){
+export default function RightContainer({searchContent}){
     return(
         <div className={styles.container}>
             <NewsSources />
-            <NewsfeedContainer />
+            <NewsfeedContainer searchContent={searchContent}/>
         </div>
     )
 }
