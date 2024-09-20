@@ -11,7 +11,7 @@ export default function DaySummary() {
         const getWeather = async () => {
             try {
                 setIsLoading(true)
-                const response = await fetch(`http://localhost:3055/weather?q='New York'`)
+                const response = await fetch(`/weather?q='New York'`)
                 const data = await response.json()
                 if (data.isSuccess) {
                     setWeather(data)

@@ -10,16 +10,15 @@ export default function NewsfeedContainer({ searchContent }) {
         const getNews = async () => {
             try {
                 setIsLoading(true)
-                const response = await fetch(`http://localhost:3055/news?country=us`)
+                const response = await fetch(`/news?country=us`)
                 const data = await response.json()
-                console.log(data.isSuccess)
                 if (data.isSuccess) {
                     setNews(data.data.data)
                     setIsLoading(false)
                 }
                 setIsLoading(false)
             } catch (err) {
-                console.log(err.message)
+                console.log("Error fetching news: " + err.message)
             }
         }
         getNews()

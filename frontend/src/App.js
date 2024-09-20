@@ -22,9 +22,9 @@ function App() {
       dispatch(changeWeatherTheme(true))
     }
   }
+
   changeTheme()
-
-
+  
   return (
     <>
       <div className="App">

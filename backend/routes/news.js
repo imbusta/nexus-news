@@ -11,6 +11,7 @@ const timelog = (req, res, next) => {
 router.use(timelog)
 
 router.get('/', async (req, res) => {
+    console.log("I'm in the server")
     const query_params = Object.entries(req.query).map(([key, value]) => {
         return `${key}=${value}`
     })
@@ -25,7 +26,6 @@ router.get('/', async (req, res) => {
             })
             return
         }
-        console.log(news)
         res.status(200).json({
             isSuccess: true,
             data: news

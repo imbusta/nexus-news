@@ -8,9 +8,6 @@ import Forecast from './Forecast'
 
 export default function WeatherBox() {
     const isNight = useSelector((state) => {return state.theme.isNight})
-    console.log(isNight)
-
-
     return (
         <div className={`${styles.container} ${isNight ? styles.weatherNight : styles.weatherDay}`}>
             <DaySummary />

@@ -9,7 +9,7 @@ export default function Forecast() {
     useEffect(() => {
         const getForecast = async () => {
             try {
-                const response = await fetch(`http://localhost:3055/weather/forecast?q="New York"&days=7`)
+                const response = await fetch(`/weather/forecast?q="New York"&days=7`)
                 const data = await response.json()
                 if (data.isSuccess) {
                     setForecast(data.data.forecast.forecastday)
