@@ -18,7 +18,11 @@ router.get('/', async (req, res) => {
     const url = `http://api.weatherapi.com/v1/current.json?${joined_query_params}&key=${process.env.api_weather_key}`
     try{
         const weather = await https.get(url)
-        res.status(200).json({isSuccess: true, data: weather})
+        if(weather.isSuccess){
+            res.status(200).json({isSuccess: weather.isSuccess, data: weather})
+        } else{
+            res.status(201).json({isSuccess: false})
+        }
     }catch (e){
         res.status(500).json({isSuccess: false, error: e.message})
     }
@@ -32,7 +36,7 @@ router.get('/forecast', async (req, res) => {
     const url = `http://api.weatherapi.com/v1/forecast.json?${joined_query_params}&key=${process.env.api_weather_key}`
     try{
         const forecast = await https.get(url)
-        res.status(200).json({isSuccess: true, data: forecast})
+        res.status(200).json({isSuccess: isSuccess, data: forecast})
     }catch(e){
         res.status(500).json({isSuccess: false, error: e.message})
     }

@@ -1,27 +1,30 @@
-// 
+import { useState, useEffect } from 'react'
 import styles from './Forecast.module.css'
 import DUMMY_FORECAST from '../../../utils/forecast.json'
 
 export default function Forecast() {
-    // const [isLoading, setIsLoading] = useState(true)
-    // const [forecast, setForecast] = useState()
-    const forecast = DUMMY_FORECAST.data.forecast.forecastday
-    const isLoading = false
+    const [isLoading, setIsLoading] = useState(true)
+    const [forecast, setForecast] = useState([])
 
-    // useEffect(() => {
-    //     const getForecast = async () => {
-    //         try {
-    //             const response = await fetch(`http://localhost:3055/weather/forecast?q="New York"&days=7`)
-    //             const data = await response.json()
-    //             setForecast(data.data.forecast.forecastday)
-    //             setIsLoading(false)
-    //         }catch(e)
-    //         {
-    //             console.log('Failed to fetch forecast: ' + e.message)
-    //         }
-    //     }
-    //     getForecast()
-    // }, [])
+    useEffect(() => {
+        const getForecast = async () => {
+            try {
+                const response = await fetch(`http://localhost:3055/weather/forecast?q="New York"&days=7`)
+                const data = await response.json()
+                if (data.isSuccess) {
+                    setForecast(data.data.forecast.forecastday)
+                    setIsLoading(false)
+                }
+                setIsLoading(false)
+            } catch (e) {
+                setIsLoading(false)
+                console.log('Failed to fetch forecast: ' + e.message)
+            }
+        }
+        getForecast()
+    }, [])
+
+    const forecastToShow = forecast.length === 0 ? DUMMY_FORECAST.data.forecast.forecastday : forecast
 
     return (
         <div className={styles.forecast}>

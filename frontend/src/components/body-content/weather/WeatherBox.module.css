@@ -15,11 +15,11 @@
     color: #333;
 }
 
-.weather-night {
+.weatherNight {
     background-color: #1E3A5F;
     color: #FFFFFF;
 }
 
-.weather-night h2 {
+.weatherNight h2 {
     color: #FFD700;
 }

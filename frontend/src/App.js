@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { changeWeatherTheme } from './store/themeSlice'
 
@@ -18,7 +18,7 @@ function App() {
 
   const changeTheme = () => {
     const date_time = new Date()
-    if (date_time.getHours() <= 19) {
+    if (date_time.getHours() >= 19) {
       dispatch(changeWeatherTheme(true))
     }
   }

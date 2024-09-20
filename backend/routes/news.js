@@ -19,10 +19,11 @@ router.get('/', async (req, res) => {
     try {
         const news = await https.get(`${url}${process.env.mediastack_api_key}`)
         if (news.error) {
-            res.status(501).json({
+            res.status(200).json({
                 isSuccess: false,
                 error: news.error.message
             })
+            return
         }
         console.log(news)
         res.status(200).json({

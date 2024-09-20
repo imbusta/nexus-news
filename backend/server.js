@@ -6,7 +6,7 @@ const port = 3055
 
 const news = require('./routes/news')
 const weather = require('./routes/weather')
-app.use(cors({ origin: 'http://localhost:3001' }));
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 app.listen(port, () => {
     console.log('Server listening on port ' + port)
