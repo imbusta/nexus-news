@@ -32,7 +32,7 @@ export default function Forecast() {
                 <p>Loading...</p> :
                 <>
                     {
-                        forecast.map((day, index) =>
+                        forecastToShow.map((day, index) =>
                             <div key={index}>
                                 <img src={`http:${day.day.condition.icon}`} alt='weather_icon' />
                                 <p><span>Min:</span></p>
